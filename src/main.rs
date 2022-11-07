@@ -13,41 +13,54 @@ fn main() {
     // // Introdocir datos
     // println!("Porfavor introduce tu nomnbre...");
 
-    // let mut nombre: String  = String::new(); 
-    
+    // let mut nombre: String  = String::new();
+
     // std::io::stdin().read_line(&mut nombre ).unwrap();
 
     // nombre = nombre.trim().to_string();
 
-    // // Optener la edad de la consola y convertirla en un numero
+    // Optener la edad de la consola y convertirla en un numero
     // println!("Porfavor introduce tu edad...");
-    
-    // let mut edad : String  = String::new(); 
-    
+
+    // let mut edad : String  = String::new();
+
     // std::io::stdin().read_line(&mut edad ).unwrap();
 
     // let edad_in : u8 = edad.trim().parse().unwrap();
-    
+
     // println!("Hola bienvenido {} de {} años", nombre, edad_in);
 
-    let mut nombre : String = String::new();
-    let mut pais: String = String::new();
+    //simple formulario para pedir nombre y pais
+    // let mut nombre : String = String::new();
+    // let mut pais: String = String::new();
 
-    println!("Hola bienvenido porfavor indique su nombre completo...");
+    // println!("Hola bienvenido porfavor indique su nombre completo...");
 
-    std::io::stdin().read_line(&mut nombre).unwrap();
+    // std::io::stdin().read_line(&mut nombre).unwrap();
 
-    nombre = nombre.trim().to_string();
+    // nombre = nombre.trim().to_string();
 
+    // println!("indique su pais de recidencia...");
 
-    println!("indique su pais de recidencia...");
+    // std::io::stdin().read_line(&mut pais).unwrap();
 
-    std::io::stdin().read_line(&mut pais).unwrap();
-    
-    pais = pais.trim().to_string();
+    // pais = pais.trim().to_string();
 
-    println!("Tu nomnbre es {} y vives en {}", nombre, pais);
+    // println!("Tu nomnbre es {} y vives en {}", nombre, pais);
 
-    
+    // Condicionale
+
+    println!("Porfavor introduce tu edad...");
+
+    let mut edad: String = String::new();
+
+    std::io::stdin().read_line(&mut edad).unwrap();
+
+    let edad_in: u8 = edad.trim().parse().unwrap();
+
+    if edad_in >= 18 {
+        println!("Party in tha club");
+    } else {
+        println!("A tu casa a ver pocoyo... PATO");
+    }
 }
-
