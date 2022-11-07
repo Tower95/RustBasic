@@ -50,17 +50,39 @@ fn main() {
 
     // Condicionale
 
-    println!("Porfavor introduce tu edad...");
+    // println!("Porfavor introduce tu edad...");
 
-    let mut edad: String = String::new();
+    // let mut edad: String = String::new();
 
-    std::io::stdin().read_line(&mut edad).unwrap();
+    // std::io::stdin().read_line(&mut edad).unwrap();
 
-    let edad_in: u8 = edad.trim().parse().unwrap();
+    // let edad_in: u8 = edad.trim().parse().unwrap();
 
-    if edad_in >= 18 {
-        println!("Party in tha club");
-    } else {
-        println!("A tu casa a ver pocoyo... PATO");
+    // if edad_in >= 18 {
+    //     println!("Party in tha club");
+    // } else {
+    //     println!("A tu casa a ver pocoyo... PATO");
+    // }
+
+    let mut eleccion : String = String::new();
+    
+    println!("Esta es tu última oportunidad. Después, ya no podrás echarte atrás. Si tomas la pastilla azul, fin de la historia. Despertarás en tu cama y creerás lo que quieras creerte. Si tomas la roja, te quedas en el País de las Maravillas y yo te enseñaré hasta dónde llega la madriguera de conejos. Recuerda lo único que te ofrezco es la verdad. Nada más.");
+    println!("Qué pastilla tomarás? roja o azul?");
+
+    std::io::stdin().read_line(&mut eleccion).unwrap();
+
+    eleccion.trim().to_string();
+
+    let pastilla : &str = &eleccion.trim();
+
+    if pastilla == "roja" {
+        println!("Despretaste en tu casa");
+    } 
+    else if pastilla == "azul" {
+        println!("Bueno dorty de Kansas puedes despedirte...");
+    } else{
+        println!("Knock knock despierta NEO!!!");
     }
+
+
 }
